@@ -8,7 +8,7 @@ int leap_year(int year)
     else
         return 0;
 }
-void user_input(int *date, int *month, int *year)
+void user_input(int *date, int *month, int *year, int cdate, int cmonth, int cyear)
 {
     int d, m, y, ly;
     printf("\nEnter Date of Birth (DD MM YYYY) : ");
@@ -18,57 +18,200 @@ void user_input(int *date, int *month, int *year)
     ly = leap_year(y);
     while(1)
     {
-        if(m==1 && d<32 && d>0)
+        if(m==1 && d<32 && d>0 && y<=cyear)
         {
-            break;
+            if(y==cyear)
+                {
+                    if(m<=cmonth)
+                    {
+                        if(d<cdate)
+                        {
+                            break;
+                        }
+                    }
+                }
+            else
+                break;
         }
-        if(m==2 && d<29 && d>0 && ly==0)
+        if(m==2 && d<29 && d>0 && ly==0 && y<=cyear)
         {
-            break;
+            if(y==cyear)
+                {
+                    if(m<=cmonth)
+                    {
+                        if(d<cdate)
+                        {
+                            break;
+                        }
+                    }
+                }
+            else
+                break;
         }
-        if(m==2 && d<30 && d>0 && ly==1)
+        if(m==2 && d<30 && d>0 && ly==1 && y<=cyear)
         {
-            break;
+            if(y==cyear)
+                {
+                    if(m<=cmonth)
+                    {
+                        if(d<cdate)
+                        {
+                            break;
+                        }
+                    }
+                }
+            else
+                break;
         }
-        if(m==3 && d<32 && d>0)
+        if(m==3 && d<32 && d>0 && y<=cyear)
         {
-            break;
+            if(y==cyear)
+                {
+                    if(m<=cmonth)
+                    {
+                        if(d<cdate)
+                        {
+                            break;
+                        }
+                    }
+                }
+            else
+                break;
         }
-        if(m==4 && d<31 && d>0)
+        if(m==4 && d<31 && d>0 && y<=cyear)
         {
-            break;
+            if(y==cyear)
+                {
+                    if(m<=cmonth)
+                    {
+                        if(d<cdate)
+                        {
+                            break;
+                        }
+                    }
+                }
+            else
+                break;
         }
-        if(m==5 && d<32 && d>0)
+        if(m==5 && d<32 && d>0 && y<=cyear)
         {
-            break;
+            if(y==cyear)
+                {
+                    if(m<=cmonth)
+                    {
+                        if(d<cdate)
+                        {
+                            break;
+                        }
+                    }
+                }
+            else
+                break;
         }
-        if(m==6 && d<31 && d>0)
+        if(m==6 && d<31 && d>0 && y<=cyear)
         {
-            break;
+            if(y==cyear)
+                {
+                    if(m<=cmonth)
+                    {
+                        if(d<cdate)
+                        {
+                            break;
+                        }
+                    }
+                }
+            else
+                break;
         }
-        if(m==7 && d<32 && d>0)
+        if(m==7 && d<32 && d>0 && y<=cyear)
         {
-            break;
+            if(y==cyear)
+                {
+                    if(m<=cmonth)
+                    {
+                        if(d<cdate)
+                        {
+                            break;
+                        }
+                    }
+                }
+            else
+                break;
         }
-        if(m==8 && d<32 && d>0)
+        if(m==8 && d<32 && d>0 && y<=cyear)
         {
-            break;
+            if(y==cyear)
+                {
+                    if(m<=cmonth)
+                    {
+                        if(d<cdate)
+                        {
+                            break;
+                        }
+                    }
+                }
+            else
+                break;
         }
-        if(m==9 && d<31 && d>0)
+        if(m==9 && d<31 && d>0 && y<=cyear)
         {
-            break;
+            if(y==cyear)
+                {
+                    if(m<=cmonth)
+                    {
+                        if(d<cdate)
+                        {
+                            break;
+                        }
+                    }
+                }
+            else
+                break;
         }
-        if(m==10 && d<32 && d>0)
+        if(m==10 && d<32 && d>0 && y<=cyear)
         {
-            break;
+            if(y==cyear)
+                {
+                    if(m<=cmonth)
+                    {
+                        if(d<cdate)
+                        {
+                            break;
+                        }
+                    }
+                }
+            else
+                break;
         }
-        if(m==11 && d<31 && d>0)
+        if(m==11 && d<31 && d>0 && y<=cyear)
         {
-            break;
+            if(y==cyear)
+                {
+                    if(m<=cmonth)
+                    {
+                        if(d<cdate)
+                        {
+                            break;
+                        }
+                    }
+                }
+            else
+                break;
         }
-        if(m==12 && d<32 && d>0)
+        if(m==12 && d<32 && d>0 && y<=cyear)
         {
-            break;
+            if(y==cyear)
+                {
+                    if(m<=cmonth)
+                    {
+                        if(d<cdate)
+                        {
+                            break;
+                        }
+                    }
+                }
+            else
+                break;
         }
         system("cls");
         printf("\nError !!\nWrong Input\nEnter Date of Birth (DD MM YYYY) : ");
@@ -82,7 +225,11 @@ void user_input(int *date, int *month, int *year)
     *month = m;
     *year = y;
 }
+                                                            /*
 
+                                                      MAIN FUNCTION
+
+                                                            */
 int main()
 {
     /* Variable Declaring Zone */
@@ -99,7 +246,7 @@ int main()
     printf("Today's Date : %s", timeDate);
     only_date(timeDate, &date, &month, &year);  // Called function for get only date from system time and date
 
-    user_input(&user_date, &user_month, &user_year);
+    user_input(&user_date, &user_month, &user_year, date, month, year);
 
     printf("\n%d %d %d", user_date, user_month, user_year);
     printf("\n%d %d %d", date, month, year);
