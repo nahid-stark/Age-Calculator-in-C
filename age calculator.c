@@ -10,7 +10,7 @@ int leap_year(int year)
 }
 void user_input(int *date, int *month, int *year, int cdate, int cmonth, int cyear)
 {
-    int d, m, y, ly;
+    int d, m, y, ly, i;
     printf("\nEnter Date of Birth (DD MM YYYY) : ");
     scanf("%d", &d);
     scanf("%d", &m);
@@ -63,7 +63,12 @@ void user_input(int *date, int *month, int *year, int cdate, int cmonth, int cye
             else
                 break;
         }
-        if(m==3 && d<32 && d>0 && y<=cyear)
+        i=3;
+        while(i<13)
+        {
+            if((i%2)==0)
+            {
+                if(m==i && d<31 && d>0 && y<=cyear)
         {
             if(y==cyear)
                 {
@@ -78,7 +83,10 @@ void user_input(int *date, int *month, int *year, int cdate, int cmonth, int cye
             else
                 break;
         }
-        if(m==4 && d<31 && d>0 && y<=cyear)
+            }
+            if((i%2)!=0)
+            {
+                if(m==i && d<32 && d>0 && y<=cyear)
         {
             if(y==cyear)
                 {
@@ -93,126 +101,12 @@ void user_input(int *date, int *month, int *year, int cdate, int cmonth, int cye
             else
                 break;
         }
-        if(m==5 && d<32 && d>0 && y<=cyear)
-        {
-            if(y==cyear)
-                {
-                    if(m<=cmonth)
-                    {
-                        if(d<cdate)
-                        {
-                            break;
-                        }
-                    }
-                }
-            else
-                break;
+            }
+        i++;
         }
-        if(m==6 && d<31 && d>0 && y<=cyear)
-        {
-            if(y==cyear)
-                {
-                    if(m<=cmonth)
-                    {
-                        if(d<cdate)
-                        {
-                            break;
-                        }
-                    }
-                }
-            else
-                break;
-        }
-        if(m==7 && d<32 && d>0 && y<=cyear)
-        {
-            if(y==cyear)
-                {
-                    if(m<=cmonth)
-                    {
-                        if(d<cdate)
-                        {
-                            break;
-                        }
-                    }
-                }
-            else
-                break;
-        }
-        if(m==8 && d<32 && d>0 && y<=cyear)
-        {
-            if(y==cyear)
-                {
-                    if(m<=cmonth)
-                    {
-                        if(d<cdate)
-                        {
-                            break;
-                        }
-                    }
-                }
-            else
-                break;
-        }
-        if(m==9 && d<31 && d>0 && y<=cyear)
-        {
-            if(y==cyear)
-                {
-                    if(m<=cmonth)
-                    {
-                        if(d<cdate)
-                        {
-                            break;
-                        }
-                    }
-                }
-            else
-                break;
-        }
-        if(m==10 && d<32 && d>0 && y<=cyear)
-        {
-            if(y==cyear)
-                {
-                    if(m<=cmonth)
-                    {
-                        if(d<cdate)
-                        {
-                            break;
-                        }
-                    }
-                }
-            else
-                break;
-        }
-        if(m==11 && d<31 && d>0 && y<=cyear)
-        {
-            if(y==cyear)
-                {
-                    if(m<=cmonth)
-                    {
-                        if(d<cdate)
-                        {
-                            break;
-                        }
-                    }
-                }
-            else
-                break;
-        }
-        if(m==12 && d<32 && d>0 && y<=cyear)
-        {
-            if(y==cyear)
-                {
-                    if(m<=cmonth)
-                    {
-                        if(d<cdate)
-                        {
-                            break;
-                        }
-                    }
-                }
-            else
-                break;
-        }
+        if(i<13)
+            break;
+
         system("cls");
         printf("\nError !!\nWrong Input\nEnter Date of Birth (DD MM YYYY) : ");
         scanf("%d", &d);
